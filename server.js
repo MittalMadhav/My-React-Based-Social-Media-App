@@ -6,6 +6,9 @@ const app = express();
 //Connecting the mongoDB Database to App using Mongoose
 connectDB();
 
+//Init Middleware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API Running')); //if localhost port 5000 server recieves anything, send a message
 
 //Defining Routes

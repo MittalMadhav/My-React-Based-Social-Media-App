@@ -75,7 +75,7 @@ router.post(
 					payload, //needs the payload that will be converted into jwt, basically the token will consist of the payload information in an encrypted format
 					config.get('jwtSecret'),
 					{ expiresIn: 360000 },
-					(err, token) => {
+					(err, token) => { //token is the encoded user payload that has the unique user id
                         if (err) 
                             throw err;
                         else 
